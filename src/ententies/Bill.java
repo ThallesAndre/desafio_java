@@ -8,11 +8,11 @@ public class Bill{
 	
     public double feeding() {
     	
-    	return   (beer*5)+ (barbecue*7)+ (softDrink*3);
+    	return   (beer*5.00)+ (barbecue*7.00)+ (softDrink*3.00);
     }	
     public double cover() {
 	
-		if((beer*5)+ (barbecue*7)+ (softDrink*3)>= 30) {
+		if(feeding() >= 30) {
 			return 0;
 		}
 		else {
@@ -20,7 +20,7 @@ public class Bill{
 		}
 	}
     public double ticket () {
-    	if(gender == 'M') {
+    	if(gender == 'M' || gender == 'm') {
 			return 10; 
 		}
 		else {

@@ -7,8 +7,8 @@ public class Aplication {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		Bill x;
-		x= new Bill(); 
+	
+		Bill x = new Bill(); 
 		
 		System.out.print("Sexo: ");
 		x.gender = sc.next().charAt(0);
@@ -20,17 +20,18 @@ public class Aplication {
 		x.barbecue =  sc.nextInt();
 	
 		
-		double valor_Feeding = x.feeding();
-		double  valor_Ticket = x.ticket();
-		double valor_Total = x.total();
-		double valor_Cover = x.cover();
-		
 		System.out.println(" Relatorio" );
-		System.out.printf(" Consumo: %.2f%n",valor_Feeding );
-		System.out.printf(" Cover: : %.2f%n",valor_Cover );
-		System.out.printf(" Valor ticket: %.2f%n",valor_Ticket );
+		System.out.printf(" Consumo: R$ %.2f%n",x.feeding() );
+		
+		if (x.cover() == 0) {
+			System.out.println("Isento de Couvert");
+		}
+		else {
+			System.out.printf(" Cover: R$ %.2f%n",x.cover() );	
+		}
+		System.out.printf(" Valor ticket: R$ %.2f%n",x.ticket());
 		System.out.println("" );
-		System.out.printf(" Valor a pagar: %.2f%n",valor_Total );
+		System.out.printf(" Valor a pagar:R$ %.2f%n",x.total() );
 		
 		
 
